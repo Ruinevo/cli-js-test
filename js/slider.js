@@ -27,51 +27,47 @@ const stringToObject = (str) => {
     } catch {
       trueObject[key] = a[key]
     }
-    
+
   })
   return trueObject
 }
 
 
-const apps = document.querySelectorAll('[data-script="slider"]')
+window.slider = (function() {
+  const apps = document.querySelectorAll('[data-script="slider"]')
 
 
 
-apps.forEach(item => {
-  
-  const dataset = Object.assign({}, item.dataset)
+  apps.forEach(item => {
 
-  const icon = dataset.navIcon
+    const dataset = Object.assign({}, item.dataset)
 
-  const settings = {}
+    const icon = dataset.navIcon
 
-  for (let i in dataset) {
-    if (i.startsWith('point')) {
-      const key = i.split('-')[1]
-      const value = stringToObject(dataset[i])
-      value.navText = [icon, icon]
-      settings[key] = value
+    const settings = {}
+
+    for (let i in dataset) {
+      if (i.startsWith('point')) {
+        const key = i.split('-')[1]
+        const value = stringToObject(dataset[i])
+        value.navText = [icon, icon]
+        settings[key] = value
+      }
     }
-  }
 
-  console.log(settings);
 
-  Vue.use(VueOwlCarousel)
+    Vue.use(VueOwlCarousel)
 
-  const comp = Vue.component('test', {
-    template: '<div>123</div>'
+    new Vue({
+      el: item,
+      template: `<div><vue-owl-carousel class="${item.className}" :responsive="settings">${item.innerHTML}</vue-owl-carousel></div>`,
+      data: {
+        settings
+      }
+    })
   })
+})()
 
-  new Vue({
-    el: item,
-    components: {
-      comp
-    },
-    template: `<div><vue-owl-carousel class="${item.className}" :responsive="settings">${item.innerHTML}</vue-owl-carousel><comp/></div>`,
-    data: {
-      settings
-    }
-  })
-})
+
 
 

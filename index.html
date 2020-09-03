@@ -7,13 +7,39 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th2.css" wfd-invisible="true">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/map.css" wfd-invisible="true">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/grid.css" wfd-invisible="true">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/core.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-vue.min.css" />
+  
+
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th1.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th2.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th3.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th4.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th5.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th6.css">
+
+
+
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/map.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/media.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/video.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/compare.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/slider.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/slider-owl.css">
+  <link rel="stylesheet" href="https://cdn.hostman.site/css/timer.css">
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-yandex-maps@0.10.9/dist/vue-yandex-maps.min.js"></script>
+
   <script src="js/moment.min.js"></script>
   <script src="js/vue-countdown.min.js"></script>
+  <script src="js/vue-owl-carousel.js"></script>
 
 
 
@@ -21,7 +47,7 @@
 
 <body>
   <!--  MAP -->
-  <div class="cli-xl">
+  <div class="cli-xl th1">
     <div class="cli-block cli-light">
       <!--  -->
       <div class="cli-map">
@@ -59,14 +85,43 @@
   <!--  ./TIMER -->
 
   <!--  BEFORE-AFTER -->
-  <div class="cli-xl">
-    <div class="cli-block cli-light">
-      <!--  -->
-      <div data-script="before-after" data-script-after="https://cdn.hostman.site/images/cover11.jpg"
-        data-script-before="https://cdn.hostman.site/images/cover12.jpg"></div>
+
+  <div class="th1">
+    <div class="cli-xl">
+      <div class="cli-block cli-light">
+        <div class="cli-compare">
+          <div class="cli-content container">
+            <div class="row">
+              <div class="col-12">
+                <div data-script="before-after" data-script-after="https://cdn.hostman.site/images/media07.jpg"
+                     data-script-before="https://cdn.hostman.site/images/media08.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <!--  ./BEFORE-AFTER -->
+
+  <!-- SLIDER -->
+
+  <div class="th2">
+    <div class="cli-xl">
+      <div class="cli-block cli-light">
+        <div class="cli-slider dots-in fixed-big" data-script="slider" data-point-0="items=1&nav=false" data-point-1200="items=1&nav=true&dotsEach=true" data-nav-icon="<svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M25.1545 20L16.7566 10.669L18.2432 9.33105L27.8452 20L18.2432 30.669L16.7566 29.3311L25.1545 20Z' /></svg>">
+          <img src="https://cdn.hostman.site/images/cover02.jpg" class="cli-img-slide">
+          <img src="https://cdn.hostman.site/images/cover03.jpg" class="cli-img-slide">
+          <img src="https://cdn.hostman.site/images/cover04.jpg" class="cli-img-slide">
+          <img src="https://cdn.hostman.site/images/cover05.jpg" class="cli-img-slide">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ./SLIDER -->
 
 
   <!--        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
@@ -74,6 +129,7 @@
   <script src="js/map.js"></script>
   <script src="js/timer.js"></script>
   <script src="js/before-after.js"></script>
+  <script src="js/slider.js"></script>
 
 </body>
 

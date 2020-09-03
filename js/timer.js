@@ -9,6 +9,49 @@ const declNum = (number, key) => {
   return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]]
 }
 
+Vue.component(VueCountdown.name, VueCountdown);
+Vue.component('TimerCounter', {
+  template: `
+  <countdown :time="time" class="timer-container" :data-time="formattedDate" :data-timezone="timezone">
+    <template v-for="slot in Object.keys($scopedSlots)" :slot="slot" slot-scope="scope"><slot :name="slot" v-bind="scope"/></template>
+  </countdown>
+  `,
+  props: {
+    value: {
+      type: Object
+    }
+  },
+  data() {
+    return {
+      time: 0,
+      timezone: 0,
+      formattedDate: 0
+    }
+  },
+  methods: {
+    parseValue() {
+      const { time, date, timezoneOffset } = this.value
+      this.timezone = timezoneOffset
+      const parts = date.split('.')
+      this.formattedDate = new Date(`${parts[2]}, ${parts[1]}, ${parts[0]}, ${time}`)
+      const timezoneDifference = parseInt(timezoneOffset) - parseInt(new Date().getTimezoneOffset())
+      this.time = this.formattedDate.getTime() - (new Date().getTime() - timezoneDifference * 60000)
+    }
+  },
+  watch: {
+    value() {
+      this.parseValue()
+    }
+  },
+  mounted() {
+    this.parseValue()
+  },
+  destroyed() {
+    clearInterval(this.timeout)
+  }
+})
+
+
 window.timer = (function () {
   const apps = document.querySelectorAll('[data-script="timer"]')
 
@@ -67,47 +110,6 @@ window.timer = (function () {
 })()
 
 
-Vue.component(VueCountdown.name, VueCountdown);
-Vue.component('TimerCounter', {
-  template: `
-  <countdown :time="time" class="timer-container" :data-time="formattedDate" :data-timezone="timezone">
-    <template v-for="slot in Object.keys($scopedSlots)" :slot="slot" slot-scope="scope"><slot :name="slot" v-bind="scope"/></template>
-  </countdown>
-  `,
-  props: {
-    value: {
-      type: Object
-    }
-  },
-  data() {
-    return {
-      time: 0,
-      timezone: 0,
-      formattedDate: 0
-    }
-  },
-  methods: {
-    parseValue() {
-      const { time, date, timezoneOffset } = this.value
-      this.timezone = timezoneOffset
-      const parts = date.split('.')
-      this.formattedDate = new Date(`${parts[2]}, ${parts[1]}, ${parts[0]}, ${time}`)
-      const timezoneDifference = parseInt(timezoneOffset) - parseInt(new Date().getTimezoneOffset())
-      this.time = this.formattedDate.getTime() - (new Date().getTime() - timezoneDifference * 60000)
-    }
-  },
-  watch: {
-    value() {
-      this.parseValue()
-    }
-  },
-  mounted() {
-    this.parseValue()
-  },
-  destroyed() {
-    clearInterval(this.timeout)
-  }
-})
 
 
 
