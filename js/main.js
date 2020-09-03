@@ -1,8 +1,17 @@
 'use strict'
 
-window.addEventListener('load', () => {
+const init = () => {
     window.slider()
     window.map()
     window.timer()
     window.beforeAfter()
-})
+}
+
+if (document.readyState == 'complete') {
+    init()
+} else {
+    window.addEventListener('load', () => {
+        init()
+    })
+}
+
