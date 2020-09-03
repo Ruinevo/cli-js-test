@@ -4,11 +4,10 @@ const DECLENSION_OF_TIMES = {
   minute: ['минута', 'минуты', 'минут'],
   second: ['секунда', 'секунды', 'секунд']
 }
- const declNum = (number, key) => {
+const declNum = (number, key) => {
   const words = DECLENSION_OF_TIMES[key]
   return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]]
 }
-
 
 Vue.component(VueCountdown.name, VueCountdown);
 Vue.component('TimerCounter', {
@@ -22,7 +21,7 @@ Vue.component('TimerCounter', {
       type: Object
     }
   },
-  data () {
+  data() {
     return {
       time: 0,
       timezone: 0,
@@ -30,7 +29,7 @@ Vue.component('TimerCounter', {
     }
   },
   methods: {
-    parseValue () {
+    parseValue() {
       const { time, date, timezoneOffset } = this.value
       this.timezone = timezoneOffset
       const parts = date.split('.')
@@ -40,23 +39,24 @@ Vue.component('TimerCounter', {
     }
   },
   watch: {
-    value () {
+    value() {
       this.parseValue()
     }
   },
-  mounted () {
+  mounted() {
     this.parseValue()
   },
-  destroyed () {
+  destroyed() {
     clearInterval(this.timeout)
   }
 })
 
-window.onload = () => {
+
+window.timer = () => {
   const apps = document.querySelectorAll('[data-script="timer"]')
 
   apps.forEach(item => {
-    
+
     const { time, timezone } = item.dataset
 
     const date = moment(new Date(time))
@@ -101,13 +101,17 @@ window.onload = () => {
       },
 
       methods: {
-        getTrueDecl (num, key) {
+        getTrueDecl(num, key) {
           return declNum(num, key)
         }
       }
     });
   })
+}
 
-};
+
+
+
+
 
 

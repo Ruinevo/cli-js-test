@@ -1,0 +1,14 @@
+input[type="range"] {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    cursor: pointer;
+}
+
+
+.cli-xl {
+    margin-bottom: 100px;
+}
