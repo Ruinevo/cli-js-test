@@ -62,7 +62,7 @@ window.slider = () => {
 
     new Vue({
       el: item,
-      template: `<div><vue-owl-carousel class="${item.className}" :responsive="settings">${item.innerHTML}</vue-owl-carousel></div>`,
+      template: `<vue-owl-carousel class="${item.className}" :responsive="settings">${item.innerHTML}</vue-owl-carousel>`,
       data: {
         settings
       }
