@@ -5,5 +5,4 @@ window.addEventListener('load', () => {
     this.map()
     this.timer()
     this.beforeAfter()
-    this.video()
 })
