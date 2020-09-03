@@ -1,4 +1,4 @@
-window.map = (function () {
+window.map = () => {
   const apps = document.querySelectorAll('[data-script="map"]')
   const { yandexMap, ymapMarker } = window['vue-yandex-maps']
 
@@ -60,7 +60,7 @@ window.map = (function () {
       }
     })
   })
-})()
+}
 
 
 

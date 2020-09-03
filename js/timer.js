@@ -52,7 +52,7 @@ Vue.component('TimerCounter', {
 })
 
 
-window.timer = (function () {
+window.timer = () => {
   const apps = document.querySelectorAll('[data-script="timer"]')
 
   apps.forEach(item => {
@@ -107,7 +107,7 @@ window.timer = (function () {
       }
     });
   })
-})()
+}
 
 
 

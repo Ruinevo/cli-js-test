@@ -33,7 +33,9 @@ const stringToObject = (str) => {
 }
 
 
-window.slider = (function() {
+window.slider = () => {
+
+
   const apps = document.querySelectorAll('[data-script="slider"]')
 
 
@@ -66,7 +68,8 @@ window.slider = (function() {
       }
     })
   })
-})()
+
+}
 
 
 

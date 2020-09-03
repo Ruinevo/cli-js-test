@@ -1,4 +1,4 @@
-window.beforeAfter = (function () {
+window.beforeAfter =  () => {
   const apps = document.querySelectorAll('[data-script="before-after"]')
 
   apps.forEach(item => {
@@ -38,6 +38,6 @@ window.beforeAfter = (function () {
       },
     })
   })
-})()
+}
 
 

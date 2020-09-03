@@ -8,15 +8,6 @@ input[type="range"] {
     cursor: pointer;
 }
 
-.cli-block {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
 
 .cli-xl {
     margin-bottom: 100px;
