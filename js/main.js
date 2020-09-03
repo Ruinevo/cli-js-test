@@ -1,8 +1,8 @@
 'use strict'
 
 window.addEventListener('load', () => {
-    this.slider()
-    this.map()
-    this.timer()
-    this.beforeAfter()
+    window.slider()
+    window.map()
+    window.timer()
+    window.beforeAfter()
 })
