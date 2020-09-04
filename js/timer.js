@@ -60,6 +60,9 @@ window.timer = () => {
     const { time, timezone } = item.dataset
     const date = moment(new Date(JSON.parse(time)))
 
+    console.log(date)
+    console.log(moment)
+
     const timeFormat = date.format('HH:mm')
 
     const dateFormat = date.format('YYYY-MM-DD')
