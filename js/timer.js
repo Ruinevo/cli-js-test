@@ -58,8 +58,7 @@ window.timer = () => {
   apps.forEach(item => {
 
     const { time, timezone } = item.dataset
-
-    const date = moment(new Date(time))
+    const date = moment(new Date(JSON.parse(time)))
 
     const timeFormat = date.format('HH:mm')
 
