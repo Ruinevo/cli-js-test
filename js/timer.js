@@ -12,7 +12,7 @@ const declNum = (number, key) => {
 Vue.component(VueCountdown.name, VueCountdown);
 Vue.component('TimerCounter', {
   template: `
-  <countdown :time="time" class="timer-container" :data-time="formattedDate" :data-timezone="timezone">
+  <countdown :time="time" class="timer-container">
     <template v-for="slot in Object.keys($scopedSlots)" :slot="slot" slot-scope="scope"><slot :name="slot" v-bind="scope"/></template>
   </countdown>
   `,
@@ -30,12 +30,23 @@ Vue.component('TimerCounter', {
   },
   methods: {
     parseValue() {
+      // const { time, date, timezoneOffset } = this.value
+      // this.timezone = timezoneOffset
+      // const parts = date.split('.')
+      // this.formattedDate = new Date(`${parts[2]}, ${parts[1]}, ${parts[0]}, ${time}`)
+      // const timezoneDifference = parseInt(timezoneOffset) - parseInt(new Date().getTimezoneOffset())
+      // console.log(new Date().getTime())
+      // this.time = this.formattedDate.getTime() - (new Date().getTime() - timezoneDifference * 60000)
+
       const { time, date, timezoneOffset } = this.value
       this.timezone = timezoneOffset
-      const parts = date.split('.')
-      this.formattedDate = new Date(`${parts[2]}, ${parts[1]}, ${parts[0]}, ${time}`)
-      const timezoneDifference = parseInt(timezoneOffset) - parseInt(new Date().getTimezoneOffset())
-      this.time = this.formattedDate.getTime() - (new Date().getTime() - timezoneDifference * 60000)
+      const [hour, minute] = time.split(':')
+      const d = moment(date).set({hour, minute})
+      const diff = d.diff(moment())
+      this.time = diff
+
+
+
     }
   },
   watch: {
@@ -59,9 +70,6 @@ window.timer = () => {
 
     const { time, timezone } = item.dataset
     const date = moment(new Date(JSON.parse(time)))
-
-    console.log(date)
-    console.log(moment)
 
     const timeFormat = date.format('HH:mm')
 
