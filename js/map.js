@@ -31,7 +31,11 @@ window.map = () => {
     </div>`,
       data() {
         return {
-          ...content,
+          controls: content.controls,
+          coords: content.coords,
+          points: content.points,
+          settings: content.settings,
+          zoom: content.zoom,
           options: {
             suppressMapOpenBlock: true
           },

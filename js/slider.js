@@ -24,7 +24,7 @@ const stringToObject = (str) => {
   Object.keys(a).forEach(key => {
     try {
       trueObject[key] = JSON.parse(a[key])
-    } catch {
+    } catch(e) {
       trueObject[key] = a[key]
     }
 
