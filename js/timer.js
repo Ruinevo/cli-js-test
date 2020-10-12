@@ -30,14 +30,6 @@ Vue.component('TimerCounter', {
   },
   methods: {
     parseValue() {
-      // const { time, date, timezoneOffset } = this.value
-      // this.timezone = timezoneOffset
-      // const parts = date.split('.')
-      // this.formattedDate = new Date(`${parts[2]}, ${parts[1]}, ${parts[0]}, ${time}`)
-      // const timezoneDifference = parseInt(timezoneOffset) - parseInt(new Date().getTimezoneOffset())
-      // console.log(new Date().getTime())
-      // this.time = this.formattedDate.getTime() - (new Date().getTime() - timezoneDifference * 60000)
-
       const { time, date, timezoneOffset } = this.value
       this.timezone = timezoneOffset
       const [hour, minute] = time.split(':')
