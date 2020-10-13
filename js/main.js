@@ -5,6 +5,7 @@ const runScripts = () => {
     window.map()
     window.timer()
     window.beforeAfter()
+    window.menu()
 }
 
 window.onload = () => {
