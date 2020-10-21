@@ -1,5 +1,20 @@
 'use strict'
 
+// polyfills
+
+var _extends = Object.assign || function(target) {
+  for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) { 
+              target[key] = source[key]; 
+          } 
+      } 
+  }
+  return target; 
+};
+
+
 // класс сообщения об ошибке
 const ERROR_CLASS = 'cli-form-field-msg'
 
@@ -29,7 +44,9 @@ const FIELDS_PATTERNS = {
 // create new DOM element
 const getNewElement = (tag, classes, content) => {
   const el = document.createElement(tag)
-  el.classList.add(...classes)
+  classes.forEach(className => {
+    el.classList.add(className)
+  })
   el.textContent = content
   return el
 }
@@ -82,10 +99,8 @@ window.form = () => {
     const constraints = {}
 
     fieldsSettings.forEach(s => {
-      constraints[s.type] = {
-        presence: s.required,
-        ...FIELDS_PATTERNS[s.type]
-      }
+      constraints[s.type] = _extends({}, FIELDS_PATTERNS[s.type]);
+      constraints[s.type].presence = s.required
     })
 
     // show message after success submit
