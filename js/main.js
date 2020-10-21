@@ -6,6 +6,7 @@ const runScripts = () => {
     window.timer()
     window.beforeAfter()
     window.menu()
+    window.form()
 }
 
 window.onload = () => {
