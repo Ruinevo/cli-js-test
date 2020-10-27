@@ -76,7 +76,7 @@ const toggle = (el) => {
   el.style.display = el.style.display === 'none' ? 'block' : 'none'
 }
 
-window.form = () => {
+window.constructorCliFunc.form = () => {
   const forms = document.querySelectorAll('[data-script="form"]')
   forms.forEach(form => {
     const message = form.closest('[data-style]').querySelector('[data-script="message"]')
