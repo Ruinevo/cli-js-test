@@ -1,150 +1,414 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/core.css">
-
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/bootstrap-vue.min.css" />
-
-
-
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th1.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th2.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th3.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th4.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th5.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th6.css">
-
-
-
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/map.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/media.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/video.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/compare.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/slider.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/slider-owl.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/timer.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/header.css">
-  <link rel="stylesheet" href="https://cdn.hostman.site/css/mobile-menu.css">
-  <link rel='stylesheet' href=https://cdn.hostman.site/css/form.css>
-
-
-
-
-
-</head>
-
-<body>
-  <!--  MAP -->
-  <div class="cli-xl th1">
-    <div class="cli-block cli-light">
-      <!--  -->
-      <div class="cli-map">
-        <!--  -->
-        <div data-script="map" class="cli-map-content"
-          data-script-content="{&quot;settings&quot;:{&quot;apiKey&quot;:&quot;3290aef5-a991-45ba-9a25-ace031ec3d11&quot;,&quot;lang&quot;:&quot;ru_RU&quot;,&quot;coordorder&quot;:&quot;latlong&quot;},&quot;controls&quot;:[],&quot;zoom&quot;:4,&quot;coords&quot;:[37.73268327606562,-130.15954824831962],&quot;points&quot;:[{&quot;id&quot;:&quot;927601f0-ed08-11ea-83ce-77bdc83adab6&quot;,&quot;name&quot;:&quot;Соединённые Штаты Америки, Калифорния, округ Сан-Бернандино&quot;,&quot;coords&quot;:[34.2833,-116.167384],&quot;title&quot;:&quot;&quot;,&quot;subtitle&quot;:&quot;&quot;}]}">
-        </div>
-        <!--  -->
-        <div class="cli-map-contacts">
-          <div class="cli-title-2 cli-bold">
-            Контакты
-          </div>
-          <div class="cli-body-1">
-            +7 987 654-32-10<br>
-            <a href="javascript:;" class="cli-link">info@constructor.ru</a>
-            <br><br>
-            г. Москва, метро “Китай город”,<br>
-            ул. Яузская, дом 15/11
-          </div>
-        </div>
-        <!--  -->
-      </div>
-    </div>
-  </div>
-  <!--  ./MAP -->
-
-  <!--  TIMER -->
-  <div class="cli-xl">
-    <div class="cli-block cli-light">
-      <!--  -->
-      <div data-time="&quot;Thu Oct 21 2020 19:00:00 GMT+0500 (Екатеринбург, стандартное время)&quot;" data-timezone="-180"
-        data-script="timer"></div>
-    </div>
-  </div>
-  <!--  ./TIMER -->
-
-  <!--  BEFORE-AFTER -->
-
-  <div class="th1">
-    <div class="cli-xl">
-      <div class="cli-block cli-light">
-        <div class="cli-compare">
-          <div class="cli-content container">
-            <div class="row">
-              <div class="col-12">
-                <div data-script="before-after" data-script-after="https://cdn.hostman.site/images/media07.jpg"
-                     data-script-before="https://cdn.hostman.site/images/media08.jpg">
+  <head>
+    <title>Rinat</title>
+    <meta name="description" content="None">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/core.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th1.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th2.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th3.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th4.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th5.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/theme.th6.css" />
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://builder-api.hostman.site/upload/59c768bfdad248dab942ac05cd80ea60.jpeg" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/about.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/footer.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/reviews.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/chevron-down.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/slider-aw-swiper.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/goods.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/cover.css" />
+    <link rel="stylesheet" href="https://cdn.hostman.site/css/video.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilroy:
+               ital,wght@0,400;0,700;1,400;1,700&amp;family=Gilroy:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" />
+  </head>
+  <body>
+    <style>@font-face{
+                                            font-family: Gilroy;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            src: url(https://cdn.hostman.site/fonts/Gilroy/400.woff2) format('woff2'),
+                                            url(https://cdn.hostman.site/fonts/Gilroy/400.woff) format('woff'),
+                                            url(https://cdn.hostman.site/fonts/Gilroy/400.ttf) format('ttf');
+                                            }
+</style>
+    <style>.page { font-family: Gilroy }
+                                        .page .cli-display,
+                                        .page .cli-title-1,
+                                        .page .cli-title-2,
+                                        .page .cli-title-3 { font-family: Gilroy }</style>
+    <style></style>
+    <div class="page th2 cli-xl cli-md cli-sm">
+      <div data-v-08483b88="" data-style="fa9b3408-df0a-430c-92bc-3c1977c5113d" class="">
+        <div data-v-08483b88="" class="cli-block cli-light js-force js-strong" block-data="[object Object]" blockid="fa9b3408-df0a-430c-92bc-3c1977c5113d" data-block-container="">
+          <div data-uuid="2060b554-7ff6-4558-a603-b4a6bd51ff85" data-element="2060b554-7ff6-4558-a603-b4a6bd51ff85/c20d5789-effc-429b-9cd1-b9635e8b0462" class="cli-swiper bullet-out nav-out v-pad">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-3">
+                  <div class="cli-swiper-side">
+                    <h2 data-element="a7277ee3-de27-4ff0-9ffe-8b8bf0ec27aa/0e14ea0b-9a69-4ec4-8d33-0889d065f467" class="cli-title-2 cli-bold">
+                      <p>Эксклюзивно онлайн</p>
+                    </h2>
+                    <h3 data-element="4b898530-fc67-40f1-b050-70541d8820f1/d9683574-9ed5-4bf2-a223-e7824afcad8b" class="cli-body-1 cli-regular">
+                      <p>Специальные скидки и цены на популярные товары при заказе в онлайн-магазине</p>
+                    </h3>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xl-9">
+                  <div data-script="slider" style="display: none" data-slider-options="{&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:30},&quot;768&quot;:{&quot;slidesPerView&quot;:3,&quot;spaceBetween&quot;:30}},&quot;content_element&quot;:&quot;goods&quot;,&quot;js&quot;:[&quot;https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js&quot;,&quot;https://cdn.jsdelivr.net/npm/vue-awesome-swiper&quot;,&quot;https://cdn.hostman.site/js/slider.js&quot;],&quot;loop&quot;:false,&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;},&quot;pagination&quot;:{&quot;bulletActiveClass&quot;:&quot;active&quot;,&quot;clickable&quot;:true,&quot;el&quot;:&quot;.swiper-pagination&quot;},&quot;sliderColumns&quot;:{&quot;max&quot;:3,&quot;min&quot;:1},&quot;slidesPerGroup&quot;:1,&quot;space_between&quot;:true}" class="cli-swiper-body"><div data-slide="" data-order="POWER Full 14" class="cli-goods-card small sale"><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/d6ef7a19-f3e4-47fb-8c8a-7ce837499e63" class="cli-sale-label"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-percent" role="presentation" class="cli-percent"><title data-v-229c6e1a="" id="cli-percent" lang="en"></title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M6.2473 18.4572L7.97599 19.5L17.7719 5.74332L16.12 4.5L6.2473 18.4572ZM4 8.57086C4 10.6564 5.59424 12.1203 7.68788 12.1203C9.78151 12.1203 11.3565 10.6564 11.3565 8.57086C11.3565 6.46524 9.78151 5.00134 7.68788 5.00134C5.59424 5.00134 4 6.46524 4 8.57086ZM6.17047 8.57086C6.17047 7.58824 6.88115 6.94652 7.68788 6.94652C8.4946 6.94652 9.18607 7.58824 9.18607 8.57086C9.18607 9.57353 8.51381 10.2152 7.68788 10.2152C6.90036 10.2152 6.17047 9.57353 6.17047 8.57086ZM12.6435 15.6096C12.6435 17.6952 14.2377 19.1791 16.3313 19.1791C18.4058 19.1791 20 17.6952 20 15.6096C20 13.504 18.4058 12.0602 16.3313 12.0602C14.2377 12.0602 12.6435 13.504 12.6435 15.6096ZM14.8139 15.6096C14.8139 14.607 15.5246 13.9652 16.3313 13.9652C17.1188 13.9652 17.8295 14.607 17.8295 15.6096C17.8295 16.5922 17.1381 17.234 16.3313 17.234C15.5438 17.234 14.8139 16.5922 14.8139 15.6096Z"></path></g></svg></div><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/420cd39d-875b-46be-8fbe-28865bd46201" class="cli-card-img"><img src="https://cdn.hostman.site/images/phone01.jpg" alt="goods-img"></div><h3 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/68ca1079-b3d0-4673-9a45-c78b9156a2e0" class="cli-name cli-body-3"><p>POWER Full 14</p></h3><h4 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/6ade8695-e9a7-41fc-94ec-3899db33e81e" class="cli-mod cli-caption-2"><p>Цвет: чёрный</p></h4><div class="cli-price cli-body-1"><span data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/1b3d2ecd-37a2-4def-94ad-4d892ff91463" data-design="2fe00dc6-fcb0-11ea-adc1-0242ac120001/1b3d2ecd-37a2-4def-94ad-4d892ff91463" class="cli-current-price"><p>8679 ₽</p></span><s data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" data-design="2fe00dc6-fcb0-11ea-adc1-0242ac120001/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" class="cli-old-price"><p>10190 ₽</p></s></div><a data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" data-design="2fe00dc6-fcb0-11ea-adc1-0242ac120001/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" href="" data-popup="" data-anchor="" class="cli-btn full primary middle"> Заказать </a></div><div data-slide="" data-order="Next Gen S7" class="cli-goods-card small sale"><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/d6ef7a19-f3e4-47fb-8c8a-7ce837499e63" class="cli-sale-label"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-percent" role="presentation" class="cli-percent"><title data-v-229c6e1a="" id="cli-percent" lang="en"></title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M6.2473 18.4572L7.97599 19.5L17.7719 5.74332L16.12 4.5L6.2473 18.4572ZM4 8.57086C4 10.6564 5.59424 12.1203 7.68788 12.1203C9.78151 12.1203 11.3565 10.6564 11.3565 8.57086C11.3565 6.46524 9.78151 5.00134 7.68788 5.00134C5.59424 5.00134 4 6.46524 4 8.57086ZM6.17047 8.57086C6.17047 7.58824 6.88115 6.94652 7.68788 6.94652C8.4946 6.94652 9.18607 7.58824 9.18607 8.57086C9.18607 9.57353 8.51381 10.2152 7.68788 10.2152C6.90036 10.2152 6.17047 9.57353 6.17047 8.57086ZM12.6435 15.6096C12.6435 17.6952 14.2377 19.1791 16.3313 19.1791C18.4058 19.1791 20 17.6952 20 15.6096C20 13.504 18.4058 12.0602 16.3313 12.0602C14.2377 12.0602 12.6435 13.504 12.6435 15.6096ZM14.8139 15.6096C14.8139 14.607 15.5246 13.9652 16.3313 13.9652C17.1188 13.9652 17.8295 14.607 17.8295 15.6096C17.8295 16.5922 17.1381 17.234 16.3313 17.234C15.5438 17.234 14.8139 16.5922 14.8139 15.6096Z"></path></g></svg></div><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/420cd39d-875b-46be-8fbe-28865bd46201" class="cli-card-img"><img src="https://cdn.hostman.site/images/phone02.jpg" alt="goods-img"></div><h3 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/68ca1079-b3d0-4673-9a45-c78b9156a2e0" class="cli-name cli-body-3"><p>Next Gen S7</p></h3><h4 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/6ade8695-e9a7-41fc-94ec-3899db33e81e" class="cli-mod cli-caption-2"><p>Цвет: синий</p></h4><div class="cli-price cli-body-1"><span data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/1b3d2ecd-37a2-4def-94ad-4d892ff91463" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120002/1b3d2ecd-37a2-4def-94ad-4d892ff91463" class="cli-current-price"><p>6790 ₽</p></span><s data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120002/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" class="cli-old-price"><p>7440 ₽</p></s></div><a data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120002/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" href="" data-popup="" data-anchor="" class="cli-btn full primary middle"> Заказать </a></div><div data-slide="" data-order="Space One 12A" class="cli-goods-card small sale"><!----><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/420cd39d-875b-46be-8fbe-28865bd46201" class="cli-card-img"><img src="https://cdn.hostman.site/images/phone03.jpg" alt="goods-img"></div><h3 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/68ca1079-b3d0-4673-9a45-c78b9156a2e0" class="cli-name cli-body-3"><p>Space One 12A</p></h3><h4 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/6ade8695-e9a7-41fc-94ec-3899db33e81e" class="cli-mod cli-caption-2"><p>Цвет: серый</p></h4><div class="cli-price cli-body-1"><span data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/1b3d2ecd-37a2-4def-94ad-4d892ff91463" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120003/1b3d2ecd-37a2-4def-94ad-4d892ff91463" class="cli-current-price"><p>16150 ₽</p></span><s data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120003/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" class="cli-old-price"><p><br></p></s></div><a data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" data-design="73cb1ce2-fcb0-11ea-adc1-0242ac120003/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" href="" data-popup="" data-anchor="" class="cli-btn full primary middle"> Заказать </a></div><div data-slide="" data-order="Strong 12 Pro" class="cli-goods-card small sale"><!----><div data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/420cd39d-875b-46be-8fbe-28865bd46201" class="cli-card-img"><img src="https://cdn.hostman.site/images/phone04.jpg" alt="goods-img"></div><h3 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/68ca1079-b3d0-4673-9a45-c78b9156a2e0" class="cli-name cli-body-3"><p>Strong 12 Pro</p></h3><h4 data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/6ade8695-e9a7-41fc-94ec-3899db33e81e" class="cli-mod cli-caption-2"><p>Цвет: черный</p></h4><div class="cli-price cli-body-1"><span data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/1b3d2ecd-37a2-4def-94ad-4d892ff91463" data-design="795fccb6-fcb0-11ea-adc1-0242ac120004/1b3d2ecd-37a2-4def-94ad-4d892ff91463" class="cli-current-price"><p>21990 ₽</p></span><s data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" data-design="795fccb6-fcb0-11ea-adc1-0242ac120004/8cbe6c8d-05b8-4c4f-83dd-03df5142d5b3" class="cli-old-price"><p><br></p></s></div><a data-element="db26cf79-9cd0-4169-96fc-2753211ecdb3/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" data-design="795fccb6-fcb0-11ea-adc1-0242ac120004/64128bc8-6759-4ca3-b6b7-bae18b5ce93a" href="" data-popup="" data-anchor="" class="cli-btn full primary middle"> Заказать </a></div><div data-element="1b7ea2dd-a612-428d-ade2-3804373d8067/83996e23-e783-4b90-bafe-fee1b8184f7c" data-navigation="" class="swiper-button-prev swiper-button-disabled"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-prev" role="presentation"><title data-v-229c6e1a="" id="cli-swiper-prev" lang="en"></title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M8.90704 12L13.9458 6.40139L13.0538 5.59863L7.29261 12L13.0538 18.4014L13.9458 17.5986L8.90704 12Z"></path></g></svg></div><div data-element="1b7ea2dd-a612-428d-ade2-3804373d8067/83996e23-e783-4b90-bafe-fee1b8184f7c" data-navigation="" class="swiper-button-next"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-next" role="presentation"><title data-v-229c6e1a="" id="cli-swiper-next" lang="en"></title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M15.093 12L10.0542 6.40139L10.9462 5.59863L16.7074 12L10.9462 18.4014L10.0542 17.5986L15.093 12Z"></path></g></svg></div>null</div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="full">
+            <div data-v-08e6239c="" class="cli-bg" style="background: rgb(255, 255, 255);">
+              <!---->
+              <!---->
+              <div data-v-08e6239c="" class="cli-fade"></div>
+            </div>
+          </div>
         </div>
+        <!---->
+      </div>
+      <div data-v-08483b88="" data-style="5e5f281e-bc60-4286-82c7-11f844ef5931" class="">
+        <div data-v-08483b88="" class="cli-block cli-dark js-force js-strong" block-data="[object Object]" blockid="5e5f281e-bc60-4286-82c7-11f844ef5931" data-block-container="">
+          <div data-uuid="3a219f25-8159-48f3-8d77-1681f10b2986" data-element="3a219f25-8159-48f3-8d77-1681f10b2986/866ac851-bf65-4026-b17b-737641b7c9a4" data-design="3a219f25-8159-48f3-8d77-1681f10b2986" class="cli-swiper nav-in bullet-out reviews v-pad">
+            <div class="cli-content">
+              <div data-script="slider" data-slider-options="{&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:0}},&quot;content_element&quot;:&quot;reviews&quot;,&quot;js&quot;:[&quot;https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js&quot;,&quot;https://cdn.jsdelivr.net/npm/vue-awesome-swiper&quot;,&quot;https://cdn.hostman.site/js/slider.js&quot;],&quot;loop&quot;:false,&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;},&quot;pagination&quot;:{&quot;bulletActiveClass&quot;:&quot;active&quot;,&quot;clickable&quot;:true,&quot;el&quot;:&quot;.swiper-pagination&quot;},&quot;sliderColumns&quot;:{&quot;max&quot;:1,&quot;min&quot;:1},&quot;slidesPerGroup&quot;:1,&quot;space_between&quot;:false}" class="cli-swiper-body">
+                <div data-slide="" class="cli-review text-center">
+                  <div data-v-3d5abbb4="" class="image-select cli-review-icon" data-element="5588abb5-a270-40c4-9561-696276579c3b/a4c6a9b3-0bf7-40a4-bbd2-f2a43d8dec1d" style="overflow: visible;">
+                    <img data-v-3d5abbb4="" src="https://cdn.hostman.site/images/review02.jpg" alt="" style="height: 100%; object-fit: inherit; border-radius: inherit;">
+                    <!---->
+                    <!---->
+                  </div>
+                  <h3 data-element="5588abb5-a270-40c4-9561-696276579c3b/f6e4ce68-497d-4cd4-8a45-0dd5fdfa43c7" class="cli-title-3 cli-regular"> Безупречная работа. Было очень приятно, что меня внимательно выслушали и предложили решение, основываясь на моих пожеланиях. </h3>
+                  <div data-element="5588abb5-a270-40c4-9561-696276579c3b/afddc894-4c5a-4832-bbf2-7ac8732592f9" class="cli-body-1 cli-regular"> Альбина Пачулина </div>
+                  <div data-element="5588abb5-a270-40c4-9561-696276579c3b/973c5e43-082d-490c-bace-32e84cbe230e" class="cli-caption"> декоратор </div>
+                </div>
+                <div data-slide="" class="cli-review text-center">
+                  <div data-v-3d5abbb4="" class="image-select cli-review-icon" data-element="5588abb5-a270-40c4-9561-696276579c3b/a4c6a9b3-0bf7-40a4-bbd2-f2a43d8dec1d" style="overflow: visible;">
+                    <img data-v-3d5abbb4="" src="https://cdn.hostman.site/images/review02.jpg" alt="" style="height: 100%; object-fit: inherit; border-radius: inherit;">
+                    <!---->
+                    <!---->
+                  </div>
+                  <h3 data-element="5588abb5-a270-40c4-9561-696276579c3b/f6e4ce68-497d-4cd4-8a45-0dd5fdfa43c7" class="cli-title-3 cli-regular"> Никогда не думала,что буду писать отзыв, но эти ребята заслуживают хороший отзыв! Выполнили задачу на высшем уровне! </h3>
+                  <div data-element="5588abb5-a270-40c4-9561-696276579c3b/afddc894-4c5a-4832-bbf2-7ac8732592f9" class="cli-body-1 cli-regular"> Александра Лаптева </div>
+                  <div data-element="5588abb5-a270-40c4-9561-696276579c3b/973c5e43-082d-490c-bace-32e84cbe230e" class="cli-caption"> секретарь </div>
+                </div>
+                <div data-element="35a6d2cd-5592-4392-9282-7bc082f27878/5f8b5485-2f7a-41e4-8aaa-b89df7673358" data-navigation="" class="swiper-button-prev swiper-button-disabled">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-prev" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-prev" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M8.90704 12L13.9458 6.40139L13.0538 5.59863L7.29261 12L13.0538 18.4014L13.9458 17.5986L8.90704 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-element="35a6d2cd-5592-4392-9282-7bc082f27878/5f8b5485-2f7a-41e4-8aaa-b89df7673358" data-navigation="" class="swiper-button-next">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-next" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-next" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M15.093 12L10.0542 6.40139L10.9462 5.59863L16.7074 12L10.9462 18.4014L10.0542 17.5986L15.093 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-pagination="" class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                  <span class="swiper-pagination-bullet active" data-element="35a6d2cd-5592-4392-9282-7bc082f27878/7d3f7935-d29e-44f3-9c72-ce3c08396baf"></span>
+                  <span class="swiper-pagination-bullet" data-element="35a6d2cd-5592-4392-9282-7bc082f27878/7d3f7935-d29e-44f3-9c72-ce3c08396baf"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="full">
+            <div data-v-08e6239c="" class="cli-bg" style="background: rgb(254, 50, 104);">
+              <!---->
+              <!---->
+              <div data-v-08e6239c="" class="cli-fade"></div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div data-v-08483b88="" data-style="e1212cda-d415-4858-8a37-968b4a45a108" class="">
+        <div data-v-08483b88="" class="cli-block cli-light js-force js-strong" block-data="[object Object]" blockid="e1212cda-d415-4858-8a37-968b4a45a108" data-block-container="">
+          <div data-element="732fce89-362a-45bd-a08b-fa1c1983d1c6/f21e2bca-c847-456d-b024-882f9a8e1630" data-design="732fce89-362a-45bd-a08b-fa1c1983d1c6" class="cli-swiper nav-out bullet-out gallery v-pad">
+            <div class="container">
+              <div class="cli-swiper-head text-center">
+                <h2 data-element="76491840-a092-4f9e-9c05-faf057d0e311/8fb3d3e0-a38d-4c72-b066-7e2bd5cd2eda" data-design="76491840-a092-4f9e-9c05-faf057d0e311" class="cli-title-1 cli-bold">
+                  <p>Видео отзывы</p>
+                </h2>
+                <h3 data-element="36961451-8086-4ed7-be56-3198534370d0/2936541e-3667-4cf2-9e25-f689b4d3af2d" data-design="36961451-8086-4ed7-be56-3198534370d0" class="cli-subtitle cli-regular">
+                  <p>Послушайте, что говорят счастливые покупатели о нашей новой коллекции продуктов.</p>
+                </h3>
+              </div>
+              <div data-script="slider" style="display: none" data-slider-options="{&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:30},&quot;768&quot;:{&quot;slidesPerView&quot;:3,&quot;spaceBetween&quot;:30}},&quot;content_element&quot;:&quot;video&quot;,&quot;js&quot;:[&quot;https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js&quot;,&quot;https://cdn.jsdelivr.net/npm/vue-awesome-swiper&quot;,&quot;https://cdn.hostman.site/js/slider.js&quot;,&quot;https://cdn.hostman.site/js/video.js&quot;],&quot;loop&quot;:false,&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;},&quot;pagination&quot;:{&quot;bulletActiveClass&quot;:&quot;active&quot;,&quot;clickable&quot;:true,&quot;el&quot;:&quot;.swiper-pagination&quot;},&quot;sliderColumns&quot;:{&quot;max&quot;:4,&quot;min&quot;:1},&quot;slidesPerGroup&quot;:1,&quot;space_between&quot;:true}" class="cli-swiper-body">
+                <div data-slide="" class="cli-video video-card cli-dark stop">
+                  <div data-video="gJJX72uJEDQ" data-element="eebcd79f-6193-4ab8-9709-51407cc75188/96a296a6-3444-4979-a599-a7de220dc8c2" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/reviewSlide01.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="eebcd79f-6193-4ab8-9709-51407cc75188/d153d5a0-b862-4aae-894d-ce85efdeb4a9" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="cli-content show">
+                    <h2 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/f812e991-7992-49dc-8b05-293b85d2e6c6" class="cli-title-3 cli-bold"> Юрий Ставничий </h2>
+                    <h3 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/b2414ec0-fa6a-48f9-966e-0953002f037a" class="cli-caption"> фотограф </h3>
+                  </div>
+                </div>
+                <div data-slide="" class="cli-video video-card cli-dark stop">
+                  <div data-video="gJJX72uJEDQ" data-element="eebcd79f-6193-4ab8-9709-51407cc75188/96a296a6-3444-4979-a599-a7de220dc8c2" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/reviewSlide02.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="eebcd79f-6193-4ab8-9709-51407cc75188/d153d5a0-b862-4aae-894d-ce85efdeb4a9" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="cli-content show">
+                    <h2 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/f812e991-7992-49dc-8b05-293b85d2e6c6" class="cli-title-3 cli-bold"> Алиса Селезнёва </h2>
+                    <h3 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/b2414ec0-fa6a-48f9-966e-0953002f037a" class="cli-caption"> писатель </h3>
+                  </div>
+                </div>
+                <div data-slide="" class="cli-video video-card cli-dark stop">
+                  <div data-video="gJJX72uJEDQ" data-element="eebcd79f-6193-4ab8-9709-51407cc75188/96a296a6-3444-4979-a599-a7de220dc8c2" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/reviewSlide03.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="eebcd79f-6193-4ab8-9709-51407cc75188/d153d5a0-b862-4aae-894d-ce85efdeb4a9" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="cli-content show">
+                    <h2 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/f812e991-7992-49dc-8b05-293b85d2e6c6" class="cli-title-3 cli-bold"> Олег Ставицкий </h2>
+                    <h3 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/b2414ec0-fa6a-48f9-966e-0953002f037a" class="cli-caption"> учитель </h3>
+                  </div>
+                </div>
+                <div data-slide="" class="cli-video video-card cli-dark stop">
+                  <div data-video="gJJX72uJEDQ" data-element="eebcd79f-6193-4ab8-9709-51407cc75188/96a296a6-3444-4979-a599-a7de220dc8c2" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/reviewSlide01.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="eebcd79f-6193-4ab8-9709-51407cc75188/d153d5a0-b862-4aae-894d-ce85efdeb4a9" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="cli-content show">
+                    <h2 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/f812e991-7992-49dc-8b05-293b85d2e6c6" class="cli-title-3 cli-bold"> Юрий Руденко </h2>
+                    <h3 data-element="eebcd79f-6193-4ab8-9709-51407cc75188/b2414ec0-fa6a-48f9-966e-0953002f037a" class="cli-caption"> скульптор </h3>
+                  </div>
+                </div>
+                <div data-element="0feadf10-4c96-44fc-b9d4-07978be31f65/5b96dee3-4e1e-4a05-a8f3-3c1052bfeb47" data-navigation="" class="swiper-button-prev swiper-button-disabled">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-prev" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-prev" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M8.90704 12L13.9458 6.40139L13.0538 5.59863L7.29261 12L13.0538 18.4014L13.9458 17.5986L8.90704 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-element="0feadf10-4c96-44fc-b9d4-07978be31f65/5b96dee3-4e1e-4a05-a8f3-3c1052bfeb47" data-navigation="" class="swiper-button-next">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-next" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-next" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M15.093 12L10.0542 6.40139L10.9462 5.59863L16.7074 12L10.9462 18.4014L10.0542 17.5986L15.093 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-pagination="" class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                  <span class="swiper-pagination-bullet active" data-element="0feadf10-4c96-44fc-b9d4-07978be31f65/a4a1a8ed-bee2-438e-bbca-b590225f2656"></span>
+                  <span class="swiper-pagination-bullet" data-element="0feadf10-4c96-44fc-b9d4-07978be31f65/a4a1a8ed-bee2-438e-bbca-b590225f2656"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="full">
+            <div data-v-08e6239c="" class="cli-bg" style="background: rgb(255, 255, 255);">
+              <!---->
+              <!---->
+              <div data-v-08e6239c="" class="cli-fade"></div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div data-v-08483b88="" data-style="7aac6bf8-cc8e-45be-99a5-d2c2c986c94e" class="">
+        <div data-v-08483b88="" class="cli-block cli-light js-force js-strong" block-data="[object Object]" blockid="7aac6bf8-cc8e-45be-99a5-d2c2c986c94e" data-block-container="">
+          <div data-element="78686516-b5b0-4206-8cf7-f2b6bd29cd82/e21db1c5-70b3-4899-bdf0-60321df9b6c7" class="cli-swiper nav-out bullet-out gallery v-pad">
+            <div class="container">
+              <div class="cli-swiper-head text-center">
+                <h2 data-element="0621ce73-70ed-4306-9cdf-d98cf34588ed/99298609-8490-4507-9224-01ae19ac4809" class="cli-title-1 cli-bold">
+                  <p>Наши продукты</p>
+                </h2>
+                <h2 data-element="b510f1a7-2e8e-43c5-b1ed-8e2295a5e63e/a984b01a-c8f3-42c7-9800-1768fe2cf9b3" class="cli-subtitle cli-regular">
+                  <p>Узнайте, как найти идеальное решение <br>для ваших лучших идей.</p>
+                </h2>
+              </div>
+              <div data-script="slider" data-slider-options="{&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:30},&quot;768&quot;:{&quot;slidesPerView&quot;:2,&quot;spaceBetween&quot;:30}},&quot;content_element&quot;:&quot;video&quot;,&quot;js&quot;:[&quot;https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js&quot;,&quot;https://cdn.jsdelivr.net/npm/vue-awesome-swiper&quot;,&quot;https://cdn.hostman.site/js/slider.js&quot;],&quot;loop&quot;:false,&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;},&quot;pagination&quot;:{&quot;bulletActiveClass&quot;:&quot;active&quot;,&quot;clickable&quot;:true,&quot;el&quot;:&quot;.swiper-pagination&quot;},&quot;sliderColumns&quot;:{&quot;max&quot;:4,&quot;min&quot;:1},&quot;slidesPerGroup&quot;:1,&quot;space_between&quot;:true}" class="cli-swiper-body">
+                <div data-slide="" data-wrapper="906c8673-d98b-4912-897d-c54a97a43a3a/f0a47488-970a-485f-906c-a92614ed11df" class="cli-video video-card stop">
+                  <div data-video="gJJX72uJEDQ" data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/64824dfb-d729-40a9-8fd3-24cd6df47f69" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/media09.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/a860d465-bf4a-438d-8d2f-671545438980" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div data-slide="" data-wrapper="906c8673-d98b-4912-897d-c54a97a43a3a/f0a47488-970a-485f-906c-a92614ed11df" class="cli-video video-card stop">
+                  <div data-video="gJJX72uJEDQ" data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/64824dfb-d729-40a9-8fd3-24cd6df47f69" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/media10.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/a860d465-bf4a-438d-8d2f-671545438980" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div data-slide="" data-wrapper="906c8673-d98b-4912-897d-c54a97a43a3a/f0a47488-970a-485f-906c-a92614ed11df" class="cli-video video-card stop">
+                  <div data-video="gJJX72uJEDQ" data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/64824dfb-d729-40a9-8fd3-24cd6df47f69" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/media09.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/a860d465-bf4a-438d-8d2f-671545438980" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div data-slide="" data-wrapper="906c8673-d98b-4912-897d-c54a97a43a3a/f0a47488-970a-485f-906c-a92614ed11df" class="cli-video video-card stop">
+                  <div data-video="gJJX72uJEDQ" data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/64824dfb-d729-40a9-8fd3-24cd6df47f69" data-video-options="{&quot;autoplay&quot;:false,&quot;mute&quot;:false,&quot;loop&quot;:true}" class="cli-video-file">
+                    <img src="https://cdn.hostman.site/images/media10.png" alt="preview">
+                    <div class="cli-fade"></div>
+                  </div>
+                  <div data-element="02b5ca30-e2fd-4ab1-aede-038ab94e3a6d/a860d465-bf4a-438d-8d2f-671545438980" data-video-btn="" class="cli-video-btn">
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-play" role="presentation" class="cli-video-play">
+                      <title data-v-229c6e1a="" id="cli-play" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M20.0612 10.3661C21.3129 11.0933 21.3129 12.9067 20.0612 13.6339L7.82411 20.7431C6.56982 21.4718 5 20.5636 5 19.1092L5 4.89078C5 3.43643 6.56981 2.52821 7.82411 3.25689L20.0612 10.3661Z"></path>
+                      </g>
+                    </svg>
+                    <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-pause" role="presentation" class="cli-video-pause">
+                      <title data-v-229c6e1a="" id="cli-pause" lang="en"></title>
+                      <g data-v-229c6e1a="" fill="currentColor">
+                        <path data-v-229c6e1a="" d="M6 3C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H8C9.10457 21 10 20.1046 10 19V5C10 3.89543 9.10457 3 8 3H6ZM16 3C14.8954 3 14 3.89543 14 5V19C14 20.1046 14.8954 21 16 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16Z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div data-element="906c8673-d98b-4912-897d-c54a97a43a3a/60b93c39-a3a6-4dab-a1ad-744682474fdc" data-navigation="" class="swiper-button-prev swiper-button-disabled">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-prev" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-prev" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M8.90704 12L13.9458 6.40139L13.0538 5.59863L7.29261 12L13.0538 18.4014L13.9458 17.5986L8.90704 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-element="906c8673-d98b-4912-897d-c54a97a43a3a/60b93c39-a3a6-4dab-a1ad-744682474fdc" data-navigation="" class="swiper-button-next">
+                  <svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-swiper-next" role="presentation">
+                    <title data-v-229c6e1a="" id="cli-swiper-next" lang="en"></title>
+                    <g data-v-229c6e1a="" fill="currentColor">
+                      <path data-v-229c6e1a="" d="M15.093 12L10.0542 6.40139L10.9462 5.59863L16.7074 12L10.9462 18.4014L10.0542 17.5986L15.093 12Z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div data-pagination="" class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                  <span class="swiper-pagination-bullet active" data-element="906c8673-d98b-4912-897d-c54a97a43a3a/8c4bedc5-d51e-43a3-b598-60cd9074814e"></span>
+                  <span class="swiper-pagination-bullet" data-element="906c8673-d98b-4912-897d-c54a97a43a3a/8c4bedc5-d51e-43a3-b598-60cd9074814e"></span>
+                  <span class="swiper-pagination-bullet" data-element="906c8673-d98b-4912-897d-c54a97a43a3a/8c4bedc5-d51e-43a3-b598-60cd9074814e"></span>
+                </div>
+              </div>
+            </div>
+            <div class="full">
+              <div data-v-08e6239c="" class="cli-bg" style="background: rgb(255, 255, 255);">
+                <!---->
+                <!---->
+                <div data-v-08e6239c="" class="cli-fade"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
       </div>
     </div>
-  </div>
-
-  <!--  ./BEFORE-AFTER -->
-
-  <!-- SLIDER -->
-
-  <div class="th2">
-    <div class="cli-xl">
-      <div class="cli-block cli-light">
-        <div class="cli-slider dots-in fixed-big" data-script="slider" data-point-0="items=1&nav=false" data-point-1200="items=1&nav=true&dotsEach=true" data-nav-icon="<svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M25.1545 20L16.7566 10.669L18.2432 9.33105L27.8452 20L18.2432 30.669L16.7566 29.3311L25.1545 20Z' /></svg>">
-          <img src="https://cdn.hostman.site/images/cover02.jpg" class="cli-img-slide">
-          <img src="https://cdn.hostman.site/images/cover03.jpg" class="cli-img-slide">
-          <img src="https://cdn.hostman.site/images/cover04.jpg" class="cli-img-slide">
-          <img src="https://cdn.hostman.site/images/cover05.jpg" class="cli-img-slide">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ./SLIDER -->
-
-  <!-- MENU -->
-<div class="th1">
-<div data-v-08483b88="" data-style="2554f9715ea9-0399-4c4a-9870-c35e79fefc14"><div data-v-08483b88="" class="cli-block cli-dark js-force js-strong"><header data-element="0db94294-4110-4276-b55f-4aec8c56144d/672e6872-0d5f-4f04-b6ae-258bb17d81cd" class="cli-header" style="background: rgb(15, 15, 15);"><div class="cli-content container-fluid"><div class="row justify-content-between align-items-center"><div class="cli-header-col"><a href="javascript:;" class="cli-header-logo cli-bold"><div data-element="09e06ff4-49fd-44de-8637-e2dbf25f142e/67d773b7-fbaf-4b54-8616-55eca8499f15" class="cli-header-name"><strong>Лого</strong></div></a></div><div class="cli-header-col"><div class="cli-header-content"><button class="cli-header-menu-btn"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-x" role="presentation"><title data-v-229c6e1a="" id="cli-x" lang="en">cli-x icon</title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M6.29289 7.70711C5.90237 7.31658 5.90237 6.68342 6.29289 6.29289C6.68342 5.90237 7.31658 5.90237 7.70711 6.29289L12 10.5858L16.2929 6.29289C16.6834 5.90237 17.3166 5.90237 17.7071 6.29289C18.0976 6.68342 18.0976 7.31658 17.7071 7.70711L13.4142 12L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L12 13.4142L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L10.5858 12L6.29289 7.70711Z"></path></g></svg></button><ul class="cli-header-menu"><li><a href="1" data-element="fe0815e0-4996-49ee-9ea6-818309d9d26e/6497d3ce-cdd9-4618-b782-5bb0c6488775" class="cli-body-1 cli-regular">О компании</a></li><li><a href="6" data-element="fe0815e0-4996-49ee-9ea6-818309d9d26e/6497d3ce-cdd9-4618-b782-5bb0c6488775" class="cli-body-1 cli-regular">Новости</a></li><li><a href=4"" data-element="fe0815e0-4996-49ee-9ea6-818309d9d26e/6497d3ce-cdd9-4618-b782-5bb0c6488775" class="cli-body-1 cli-regular">Помощь</a></li><li><a href="3" data-element="fe0815e0-4996-49ee-9ea6-818309d9d26e/6497d3ce-cdd9-4618-b782-5bb0c6488775" class="cli-body-1 cli-regular">Отзывы</a></li><li><a href="2" data-element="fe0815e0-4996-49ee-9ea6-818309d9d26e/6497d3ce-cdd9-4618-b782-5bb0c6488775" class="cli-body-1 cli-regular">Контакты</a></li></ul><div class="cli-header-data"><div data-element="95e0afe8-8ddf-4e56-b3b8-1cdd5fbddc13/b55d2c82-137c-41c8-a20b-a37fa5439a59" class="cli-caption">Служба продаж</div><div data-element="c7cac8a8-2d2b-4e7c-8410-f55cd36878e7/18512be5-f16e-448b-bee1-5bc50e798517" class="cli-body-1 cli-bold"><strong>+7 495 123-45-67</strong></div></div><a href="5" data-element="e8e74578-840e-41fd-bd1f-de5014a6d352/fdd2b092-29c0-4b1d-9ef6-2e8325048dbe" contenteditable="true" class="cli-header-btn cli-btn fixed primary middle"> Оставить заявку </a></div><button class="cli-header-menu-btn"><svg data-v-229c6e1a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="cli-mobile-menu" role="presentation"><title data-v-229c6e1a="" id="cli-mobile-menu" lang="en">cli-mobile-menu icon</title><g data-v-229c6e1a="" fill="currentColor"><path data-v-229c6e1a="" d="M4 8C3.44772 8 3 8.44772 3 9C3 9.55228 3.44772 10 4 10H20C20.5523 10 21 9.55228 21 9C21 8.44772 20.5523 8 20 8H4ZM4 14C3.44772 14 3 14.4477 3 15C3 15.5523 3.44772 16 4 16H20C20.5523 16 21 15.5523 21 15C21 14.4477 20.5523 14 20 14H4Z"></path></g></svg></button></div></div></div></header></div><!----></div></div>
-  <!--./MENU -->
-
-  <!--FORM-->
-  <div class="th1"><div data-v-08483b88="" data-style="2600ca32f443-277f-4dd0-afc7-e6f0487b670a" class=""><div data-v-08483b88="" class="cli-block cli-light js-force js-strong"><div data-element="ed567eba-3afc-4644-87ee-ca782815bbaa/4aa0ecb2-e253-4a8a-b6c6-d02a5703db94" class="cli-form full"><div class="cli-content container"><div class="row justify-content-center text-center"><div class="col-sm-12 col-md-10 col-xl-12"><h2 data-element="874aad4c-992c-4c90-a4de-c163a23c6b0a/79e3679f-bcbd-408b-ae66-84a3167ea627" class="cli-title-1"><strong>Свяжитесь с нами</strong></h2><div class="cli-body-1 cli-regular"><p data-element="54c56c27-55a7-4dd4-9ea7-b259e680cf44/c901a5b4-0852-49de-96a5-501283f730e7">Продавать больше - это все, что нужно, чтобы направлять посетителей через правильные шаги</p></div><form data-script="form" data-form-options="{&quot;destinations&quot;:{&quot;emails&quot;:[{&quot;id&quot;:&quot;a841fbc0-139a-11eb-89be-d9f071399722&quot;,&quot;value&quot;:&quot;sadykovra@mail.ru&quot;}]},&quot;fields&quot;:[&quot;text&quot;,&quot;email&quot;,&quot;tel&quot;],&quot;max_fieldsCount&quot;:4,&quot;action&quot;:{&quot;redirect&quot;:&quot;&quot;,&quot;action_type&quot;:&quot;show_message&quot;,&quot;message&quot;:{&quot;title&quot;:&quot;фыв&quot;,&quot;closeText&quot;:&quot;фыв&quot;,&quot;subtitle&quot;:&quot;фыв&quot;}}}" data-form-content="{&quot;btnText&quot;:&quot;Оставить заявку&quot;,&quot;privacyPolice&quot;:&quot;&quot;,&quot;fields&quot;:[{&quot;name&quot;:&quot;Имя&quot;,&quot;required&quot;:false,&quot;options&quot;:[],&quot;placeholder&quot;:&quot;Ваше имя&quot;,&quot;id&quot;:&quot;00025746-fcbd-11ea-adc1-0242ac120002&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;name&quot;:&quot;Телефон&quot;,&quot;required&quot;:false,&quot;options&quot;:[],&quot;placeholder&quot;:&quot;Телефон&quot;,&quot;id&quot;:&quot;084ee4fa-fcbd-11ea-adc1-0242ac120002&quot;,&quot;type&quot;:&quot;tel&quot;},{&quot;name&quot;:&quot;Почта&quot;,&quot;required&quot;:false,&quot;options&quot;:[],&quot;placeholder&quot;:&quot;Почта&quot;,&quot;id&quot;:&quot;0bf49fe6-fcbd-11ea-adc1-0242ac120002&quot;,&quot;type&quot;:&quot;email&quot;}]}" id="b602471ed90a5481cc85739b3e46d2b2" novalidate="novalidate" class="cli-form-block small"><div data-element="335f3a1a-c0b7-418c-86eb-0459756e124d/9ca2d5b8-086c-4264-822d-da75ac7bc24f" class="cli-form-field"><input type="text" placeholder="Ваше имя"><!----><!----><!----></div><div data-element="335f3a1a-c0b7-418c-86eb-0459756e124d/9ca2d5b8-086c-4264-822d-da75ac7bc24f" class="cli-form-field"><!----><!----><input type="tel" placeholder="Телефон"><!----></div><div data-element="335f3a1a-c0b7-418c-86eb-0459756e124d/9ca2d5b8-086c-4264-822d-da75ac7bc24f" class="cli-form-field"><!----><input type="email" placeholder="Почта"><!----><!----></div><button type="submit" contenteditable="false" data-element="335f3a1a-c0b7-418c-86eb-0459756e124d/a3066d3d-562c-40c1-ae34-abe9a63b4cf7" class="cli-btn fixed primary big"> Оставить заявку </button></form><p data-element="df34f8aa-41fa-4bdf-8d01-06a223038eac/62db0995-b57d-4714-86c7-c80851751827" class="cli-body-2 cli-regular">Оставляя заявку, вы соглашаетесь на <a href="" target="_blank" rel="noopener noreferrer nofollow" class="cli-link">обработку персональных данных</a> и с <a href="" target="_blank" rel="noopener noreferrer nofollow" class="cli-link">условиями бронирования счёта</a></p></div></div></div><div class="cli-bg" style="background: rgb(255, 255, 255);"><!----><!----><div class="cli-fade"></div></div></div><div data-script="message" class="cli-block cli-light" style="display: none;" wfd-invisible="true"><div class="cli-form full"><div class="cli-content container"><div class="row justify-content-center text-center"><div class="col-sm-12 col-md-10 col-xl-6"><h2 class="cli-title-1 cli-bold"> фыв </h2><div class="cli-body-1 cli-regular"><p> фыв </p></div><a href="javascript:;" class="cli-btn fixed primary big">фыв</a></div></div></div><div class="cli-bg" style="background: rgb(255, 255, 255);"><div class="cli-fade"></div></div></div></div></div><!----></div></div>
-  <!--./FORM-->
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-yandex-maps@0.10.9/dist/vue-yandex-maps.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="js/vue-countdown.min.js"></script>
-<script src="js/vue-owl-carousel.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-
-  <script src="js/map.js"></script>
-  <script src="js/timer.js"></script>
-  <script src="js/before-after.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/main.js"></script>
-
-</body>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="https://cdn.hostman.site/js/button.js"></script>
+    <script type="text/javascript" src="https://cdn.hostman.site/js/video.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>

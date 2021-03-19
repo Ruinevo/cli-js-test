@@ -1,76 +1,80 @@
-if (!Object.fromEntries) {
-  Object.defineProperty(Object, 'fromEntries', {
-    value(entries) {
-      if (!entries || !entries[Symbol.iterator]) { throw new Error('Object.fromEntries() requires a single iterable argument'); }
+const slider = () => {
 
-      const o = {};
+    console.time('pre')
 
-      Object.keys(entries).forEach((key) => {
-        const [k, v] = entries[key];
+    const apps = document.querySelectorAll('[data-script="slider"]')
 
-        o[k] = v;
-      });
-
-      return o;
-    },
-  });
-}
-
-
-const stringToObject = (str) => {
-  const obj = new URLSearchParams(str);
-  const a = Object.fromEntries([...obj])
-  const trueObject = {}
-  Object.keys(a).forEach(key => {
-    try {
-      trueObject[key] = JSON.parse(a[key])
-    } catch(e) {
-      trueObject[key] = a[key]
-    }
-
-  })
-  return trueObject
-}
-
-
-window.slider = () => {
-
-
-  const apps = document.querySelectorAll('[data-script="slider"]')
-
-
-
-  apps.forEach(item => {
-
-    const dataset = Object.assign({}, item.dataset)
-
-    const icon = dataset.navIcon
-
-    const settings = {}
-
-    for (let i in dataset) {
-      if (i.startsWith('point')) {
-        const key = i.split('-')[1]
-        const value = stringToObject(dataset[i])
-        value.navText = [icon, icon]
-        settings[key] = value
-      }
+    const getClassName = (selector) => {
+        if (selector.startsWith('.')) {
+            return selector.slice(1)
+        }
+        return selector
     }
 
 
-    Vue.use(VueOwlCarousel)
 
-    new Vue({
-      el: item,
-      template: `<div class="${item.className}"><vue-owl-carousel :responsive="settings">${item.innerHTML}</vue-owl-carousel></div>`,
-      data: {
-        settings
-      }
+    apps.forEach(item => {
+
+        console.time('pre')
+
+        const options = JSON.parse(item.dataset.sliderOptions)
+
+        options.preloadImages = false
+        options.lazy = true
+
+
+        const prevSelector = options.navigation.prevEl
+        const nextSelector = options.navigation.nextEl
+        const paginationSelector = options.pagination.el
+
+        const prevBtn = item.querySelector(`[data-navigation]${prevSelector}`)
+        const nextBtn = item.querySelector(`[data-navigation]${nextSelector}`)
+
+        const pagination = item.querySelector(`[data-pagination]${paginationSelector}`)
+
+        prevBtn.setAttribute('slot', 'button-prev')
+        nextBtn.setAttribute('slot', 'button-next')
+
+
+
+        const slides = Array.from(item.querySelectorAll('[data-slide]')).map(slide => {
+            const parentDataset = slide.dataset.wrapper
+            if (parentDataset !== undefined) return `<swiper-slide data-element="${parentDataset}">${slide.outerHTML}</swiper-slide>`
+            return `<swiper-slide>${slide.outerHTML}</swiper-slide>`
+        })
+
+
+        if (pagination) {
+            options.pagination.renderBullet = (index, className) => pagination.querySelector('span').outerHTML
+        }
+
+
+        Vue.use(VueAwesomeSwiper)
+
+        new Vue({
+            el: item,
+            template: `
+      <div :style="{ opacity: loaded ? 1 : 0 }" class="${item.className}"><swiper :options="swiperOptions" @ready="loaded = true">
+                  ${slides.join('\n')}
+                  <div v-if="paginationEl" class="${getClassName(paginationSelector)}" slot="pagination"></div>
+                  ${prevBtn.outerHTML}
+                  ${nextBtn.outerHTML}
+                </swiper>
+            </div>`,
+            data: {
+                swiperOptions: options,
+                paginationEl: pagination,
+                loaded: false
+            }
+        })
+
     })
-  })
-
+    console.timeEnd('pre')
 }
 
-
-
-
+if (window.constructorCliFunc) {
+    window.constructorCliFunc.slider = slider
+} else {
+    const constructorCliFunc = { slider }
+    window.constructorCliFunc = constructorCliFunc
+}

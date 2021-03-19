@@ -1,14 +1,16 @@
 'use strict'
+window.formApi = 'https://builder-api.hostman.site/api/forms'
 
-const runScripts = () => {
-    window.slider()
-    window.map()
-    window.timer()
-    window.beforeAfter()
-    window.menu()
-    window.form()
-}
+console.time('test')
 
-window.onload = () => {
-    runScripts()
-}
+
+
+Object.keys(window.constructorCliFunc).forEach(key => window.constructorCliFunc[key]())
+  console.timeEnd('test')
+
+
+
+
+
+
+
