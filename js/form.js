@@ -69,27 +69,6 @@ var redirectTo = function redirectTo(url) {
     return window.location.href = url;
 }; // hide or show DOM element
 
-<<<<<<< HEAD
-=======
-window.constructorCliFunc.form = () => {
-  const forms = document.querySelectorAll('[data-script="form"]')
-  forms.forEach(form => {
-    const message = form.closest('[data-style]').querySelector('[data-script="message"]')
-    const popup = form.closest('[data-style]').querySelector('[data-script="popup"]')
-    const dataOptions = JSON.parse(form.dataset.formOptions)
-    const dataContent = JSON.parse(form.dataset.formContent)
-    const fieldsSettings = dataContent.fields
-    const { action_type:actionType, redirect } = dataOptions.action
-    const formId = form.id
-
-    let url = ''
-
-    if (actionType === 'redirect_to_page') {
-      url = convertLinkToPage(redirect)
-    } else if (actionType === 'redirect_to_site') {
-      url = convertLinkToSite(redirect)
-    }
->>>>>>> c699fe50d33e5b79d06c0cce5e53017c424f4ea1
 
 var toggle = function toggle(el, isPopup) {
     if (isPopup) {
